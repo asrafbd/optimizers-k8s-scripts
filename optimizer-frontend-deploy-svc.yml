@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: amdadulbari/optimizers-frontend:596c4fctst
+        image: amdadulbari/optimizers-frontend:15e84a4
         imagePullPolicy: Always
         ports:
         - containerPort: 80
