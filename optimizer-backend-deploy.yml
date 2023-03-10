@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: optimizers-profile-service
+  labels:
+    app: optimizers-profile-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: optimizers-profile-service
+  template:
+    metadata:
+      labels:
+        app: optimizers-profile-service
+    spec:
+      containers:
+      - name: optimizers-profile-service
+        image: amdadulbari/optimizers-profile-service:v1
+        imagePullPolicy: Always
+        envFrom:
+        - secretRef:
+            name: db-secrets
+      imagePullSecrets:
+      - name: amdadul-reg-cred
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: optimizers-profile-service
+  labels:
+    run: optimizers-profile-service
+spec:
+  type: NodePort
+  ports:
+  - port: 5000
+    protocol: TCP
+    nodePort: 30007
+  selector:
+    app: optimizers-profile-service
+                               
