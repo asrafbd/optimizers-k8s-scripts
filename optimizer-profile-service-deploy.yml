@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: optimizers-profile-service
-        image: amdadulbari/optimizers-profile-service:v1
+        image: amdadulbari/optimizers-profile-service:aabd17a
         imagePullPolicy: Always
         envFrom:
         - secretRef:
