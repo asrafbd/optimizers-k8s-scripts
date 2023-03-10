@@ -20,6 +20,13 @@ spec:
         - containerPort: 80
       imagePullSecrets:
       - name: amdadul-reg-cred
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+      
 
 
 
