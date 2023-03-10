@@ -38,7 +38,7 @@ spec:
   ports:
   - port: 5000
     protocol: TCP
-    nodePort: 30007
+    nodePort: 30008
   selector:
     app: optimizers-profile-service
                                
