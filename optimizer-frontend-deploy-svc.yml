@@ -25,9 +25,7 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 5
       imagePullSecrets:
-      - name: amdadul-reg-cred
-      
-
+      - name: amdadul-reg-cred 
 
 
 ---
