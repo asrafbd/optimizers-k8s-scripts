@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: amdadulbari/optmizers:frontendv3
+        image: amdadulbari/optimizers-frontend:test
         imagePullPolicy: Always
         ports:
         - containerPort: 80
